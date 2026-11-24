@@ -1,16 +1,39 @@
-# React + Vite
+﻿# Kodela Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fondasi frontend untuk landing page satu halaman Kodela Studio. Saat ini aplikasi hanya menampilkan identitas proyek. Section bisnis dan integrasi akan ditambahkan pada pekerjaan berikutnya.
 
-Currently, two official plugins are available:
+## Stack dan lingkungan
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React dan Vite dengan JavaScript/JSX
+- Tailwind CSS v4
+- Node.js 24.20.0 dan npm
 
-## React Compiler
+## Menjalankan proyek
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```powershell
+npm.cmd ci
+npm.cmd run dev
+```
 
-## Expanding the ESLint configuration
+Buka URL lokal yang ditampilkan Vite. Pada shell yang tidak memblokir launcher npm, `npm` dapat digunakan sebagai pengganti `npm.cmd`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Pemeriksaan dan build
+
+```powershell
+npm.cmd run lint
+npm.cmd run build
+npm.cmd run preview
+```
+
+`preview` menyajikan hasil build lokal untuk pemeriksaan. Hasil build berada di `dist/` dan tidak perlu diedit langsung.
+
+## Struktur saat ini
+
+- `index.html`: dokumen dan elemen mount React.
+- `src/main.jsx`: bootstrap React dan impor CSS global.
+- `src/App.jsx`: akar komposisi halaman.
+- `src/index.css`: impor Tailwind CSS.
+- `vite.config.js`: konfigurasi plugin React dan Tailwind CSS.
+- `docs/tickets/KDL-001/`: requirement, analisis, dan rencana fondasi.
+
+Tambahkan komponen, section, atau modul konten di `src/` ketika fiturnya benar-benar diperlukan. Jangan membuat direktori kosong sebagai placeholder.
